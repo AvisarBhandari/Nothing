@@ -134,7 +134,7 @@ public class Login extends Fragment {
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
                 NavHostFragment.findNavController(Login.this)
-                        .navigate(R.id.list);
+                        .navigate(R.id.list2);
 
             }
         });

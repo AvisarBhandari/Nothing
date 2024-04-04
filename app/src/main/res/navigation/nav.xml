@@ -11,7 +11,11 @@
         android:id="@+id/login2"
         android:name="com.example.newapp.ui.login.Login"
         android:label="login"
-        tools:layout="@layout/login" />
+        tools:layout="@layout/login" >
+        <action
+            android:id="@+id/action_login2_to_list2"
+            app:destination="@id/list2" />
+    </fragment>
     <fragment
         android:id="@+id/list2"
         android:name="com.example.newapp.list"
