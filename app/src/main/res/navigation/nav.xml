@@ -13,12 +13,12 @@
         android:label="login"
         tools:layout="@layout/login" >
         <action
-            android:id="@+id/action_login2_to_list2"
-            app:destination="@id/list2" />
+            android:id="@+id/action_login2_to_first"
+            app:destination="@id/first" />
     </fragment>
     <fragment
-        android:id="@+id/list2"
-        android:name="com.example.newapp.list"
-        android:label="fragment_list_list"
-        tools:layout="@layout/fragment_list_list" />
+        android:id="@+id/first"
+        android:name="com.example.newapp.First"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" />
 </navigation>

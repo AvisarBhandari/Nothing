@@ -21,21 +21,17 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import androidx.navigation.fragment.NavHostFragment;
-import android.content.Intent;
 
 
 import com.example.newapp.databinding.LoginBinding;
 
 import com.example.newapp.R;
-import com.example.newapp.list;
-
-import java.util.List;
 
 public class Login extends Fragment {
 
     private LoginViewModel loginViewModel;
     private LoginBinding binding;
+    View rootview;
 
     @Nullable
     @Override
@@ -47,9 +43,8 @@ public class Login extends Fragment {
         return binding.getRoot();
 
 
-
-
     }
+
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -134,11 +129,13 @@ public class Login extends Fragment {
                 loginViewModel.login(usernameEditText.getText().toString(),
                         passwordEditText.getText().toString());
                 NavHostFragment.findNavController(Login.this)
-                        .navigate(R.id.list2);
+                        .navigate(R.id.first);
 
             }
         });
     }
+
+
 
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
